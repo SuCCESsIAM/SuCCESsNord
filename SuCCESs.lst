@@ -1,0 +1,172 @@
+GAMS 42.5.0  cf11b917 Mar 30, 2023          WEX-WEI x86 64bit/MS Windows - 03/24/26 10:10:36 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  *
+   2  * SuCCESs IAM - An integrated assessment model for Sustainable Climate Change mitigation strategies in Energy-Land-Material Systems
+   3  *
+   4  * Model version: SuCCESs-Nord 2026-03-24
+   5  *
+   6  * Contact: Tommi Ekholm, Finnish Meteorological Institute (tommi.ekholm@fmi.fi)
+   7  *
+   8  * SuCCESs IAM is licensed under the MIT license, except of for OSeMOSYS_dec.GMS and OSeMOSYS_equ.GMS
+   9  *
+  10  * OSeMOSYS_dec.GMS and OSeMOSYS_equ.GMS are based on a modified version of OSEMOSYS:
+  11  * OSEMOSYS 2011.07.07 conversion to GAMS by Ken Noble, Noble-Soft Systems - August 2012
+  12  * OSEMOSYS 2017.11.08 update by Thorsten Burandt, Konstantin Loeffler and Karlo Hainsch, TU Berlin (Workgroup for Infrastructure Policy) - October 2017
+  13  * Licensed under the Apache License 2.0, see LICENCE_OSeMOSYS
+  14  *
+GAMS 42.5.0  cf11b917 Mar 30, 2023          WEX-WEI x86 64bit/MS Windows - 03/24/26 10:10:36 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\SuCCESs.gms
+     2       29 INCLUDE        1      29  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\osemosys_dec.gms
+     3      311 INCLUDE        1      36  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Base.gms
+     4      606 INCLUDE        1      39  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Techs_XTRC.gms
+     5     1011 INCLUDE        1      40  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Techs_REFI.gms
+     6     1344 INCLUDE        1      41  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Techs_ELEC.gms
+     7     1778 INCLUDE        1      42  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Techs_CHEM.gms
+     8     2126 INCLUDE        1      43  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Techs_INDU.gms
+     9     2654 INCLUDE        1      44  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Techs_TRAN.gms
+    10     2993 INCLUDE        1      45  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Techs_BLDN.gms
+    11     3115 INCLUDE        1      48  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Demand.gms
+    12     3354 INCLUDE        1      49  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Demand_Nord.gms
+    13     3587 INCLUDE        1      55  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Techs_TEMP.gms
+    14     3697 INCLUDE        1      61  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Emissions.gms
+    15     3782 INCLUDE        1      65  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Trade.gms
+    16     3873 INCLUDE        1      68  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Electricity_main.gms
+    17     3896 INCLUDE       16      23  ..C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\ElectricityData\multi-all\REPRESENTATIVE_PERIODS.txt
+    18     3905 INCLUDE       16      27  ..C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\ElectricityData\multi-all\HOURS.txt
+    19     4113 INCLUDE       16      67  ..C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\ElectricityData\multi-all\REPRESENTATIVE_PERIODS_WEIGHTS.txt
+    20     4122 INCLUDE       16      71  ..C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\ElectricityData\multi-all\VRE_CAPACITY_FACTORS.txt
+    21     4967 INCLUDE       16      75  ..C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\ElectricityData\multi-all\DEMAND.txt
+    22     5893 INCLUDE       16     160  ..C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Electricity_core.gms
+    23     6091 INCLUDE        1      71  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CapacityInitial.gms
+    24     6223 INCLUDE        1      72  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CapacityInitial_Nord.gms
+    25     6322 INCLUDE        1      75  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH_Connector.gms
+    26     6331 BATINCLUDE    25       9  ..C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASH_Core.gms
+    27     6434 BATINCLUDE    26     103  ...C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASH_ReadData.gms
+    28     6450 GDXIN         27      16  ...C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASH_Parametrization_ECE.gdx
+    29     6461 INCLUDE       27      27  ....C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASHinput_LUH2_LUAreaByBiome.txt
+    30     6477 INCLUDE       27      32  ....C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASHinput_LUH2_LUAreaSSP245.txt
+    31     6573 INCLUDE       27      37  ....C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASHinput_LUH2_ForestAgeClassArea.txt
+    32     6588 INCLUDE       27      41  ....C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASHinput_WoodProperties.txt
+    33     6616 BATINCLUDE    26     106  ...C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASH_Livestock.gms
+    34     7355 INCLUDE        1      76  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Techs_NonCO2.gms
+    35     7612 INCLUDE        1      79  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Climate.gms
+    36     7865 INCLUDE        1     108  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\Scenario_FixLandUseToSSP245.gms
+    37     7881 INCLUDE        1     118  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\osemosys_equ.gms
+    38     8449 INCLUDE        1     142  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\PostProcess_Energy.gms
+    39     8518 INCLUDE        1     143  .C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\PostProcess_Emissions.gms
+
+
+COMPILATION TIME     =        0.016 SECONDS      4 MB  42.5.0 cf11b917 WEX-WEI
+GAMS 42.5.0  cf11b917 Mar 30, 2023          WEX-WEI x86 64bit/MS Windows - 03/24/26 10:10:36 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE SuCCESs Using LP From line 8439
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 2.625E-06, 3.655E+08] - Zero values observed as well
+Bound     [min, max] : [ 3.812E-05, 3.830E+04] - Zero values observed as well
+Matrix    [min, max] : [ 1.801E-14, 1.000E+06] - Zero values observed as well
+
+GAMS 42.5.0  cf11b917 Mar 30, 2023          WEX-WEI x86 64bit/MS Windows - 03/24/26 10:10:36 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE SuCCESs Using LP From line 8439
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS         213     SINGLE EQUATIONS    3,547,278
+BLOCKS OF VARIABLES         109     SINGLE VARIABLES    4,224,178  589 projected
+NON ZERO ELEMENTS    10,130,031
+
+
+GENERATION TIME      =        9.828 SECONDS  1,140 MB  42.5.0 cf11b917 WEX-WEI
+GAMS 42.5.0  cf11b917 Mar 30, 2023          WEX-WEI x86 64bit/MS Windows - 03/24/26 10:10:36 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE SuCCESs Using LP From line 8439
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   SuCCESs             OBJECTIVE  z
+     TYPE    LP                  DIRECTION  MINIMIZE
+     SOLVER  CPLEX               FROM LINE  8439
+
+**** SOLVER STATUS     8 User Interrupt
+**** MODEL STATUS      6 Intermediate Infeasible
+**** OBJECTIVE VALUE                0.0000
+
+ RESOURCE USAGE, LIMIT          9.234 10000000000.000
+ ITERATION COUNT, LIMIT         0    2147483647
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+
+Reading parameter(s) from "C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\cplex.opt"
+>>  scaind=1
+>>  rerun=auto
+>>  iis=1
+>>  lpmethod=4
+>>  baralg=1
+>>  barcrossalg=1
+>>  barorder=1
+>>  THREADS=4
+>>  ! barobjrng=150
+>>  barepcomp=1E-10
+>>  advind=0
+>>  ! solutiontype=2
+>>  barobjrng=1e+22
+Finished reading from "C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 515.25 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 1383.02 Mb (peak 1396.55 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 120.73 Mb (peak 848.92 Mb)
+--- Starting Cplex
+
+
+--- LP status (13): user aborted.
+--- Cplex Time: 5.55sec (det. 5268.68 ticks)
+
+--- Rerunning with presolve turned off and solving with LPMETHOD=1.
+
+
+--- LP status (13): user aborted.
+--- Cplex Time: 1.55sec (det. 2255.05 ticks)
+
+
+Solution aborted due to user request
+
+
+
+**** REPORT SUMMARY :   719515     NONOPT ( NOPT)
+                          3394 INFEASIBLE (INFES)
+                    SUM    3.8772367E+9
+                    MAX    3.6546221E+8
+                    MEAN   1142379.6855
+                             0  UNBOUNDED
+GAMS 42.5.0  cf11b917 Mar 30, 2023          WEX-WEI x86 64bit/MS Windows - 03/24/26 10:10:36 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+EXECUTION TIME       =       29.484 SECONDS  1,140 MB  42.5.0 cf11b917 WEX-WEI
+
+
+USER: MUD- 3 User License                            S220317|0002CO-WIN
+      Finnish Meteorological Institute, Climate System ModeliDC16136-S1
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\SuCCESs.gms
+Output     C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\SuCCESs.lst

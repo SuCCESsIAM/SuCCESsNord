@@ -1,0 +1,13 @@
+scaind=1
+rerun=auto
+iis=1
+lpmethod=4
+baralg=1
+barcrossalg=1
+barorder=1
+THREADS=4
+! barobjrng=150
+barepcomp=1E-10
+advind=0
+! solutiontype=2
+barobjrng=1e+22

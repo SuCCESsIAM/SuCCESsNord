@@ -1,0 +1,187 @@
+--- Job SuCCESs.gms Start 03/24/26 10:10:36 42.5.0 cf11b917 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\42\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\SuCCESs.gms"
+    PageSize 0
+    ScrDir "C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\225a\"
+    SysDir C:\GAMS\42\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: MUD- 3 User License                            S220317|0002CO-WIN
+          Finnish Meteorological Institute, Climate System ModeliDC16136-S1
+          C:\Users\ekholm\Documents\GAMS\gamslice.txt
+          License Admin: Tommi Ekholm, tommi.ekholm@fmi.fi                 
+Processor information: 1 socket(s), 10 core(s), and 12 thread(s) available
+GAMS 42.5.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- SuCCESs.gms(29) 2 Mb
+--- . osemosys_dec.gms(275) 2 Mb
+--- SuCCESs.gms(36) 2 Mb
+--- . Base.gms(292) 3 Mb
+--- SuCCESs.gms(39) 3 Mb
+--- . Techs_XTRC.gms(404) 3 Mb
+--- SuCCESs.gms(40) 3 Mb
+--- . Techs_REFI.gms(332) 3 Mb
+--- SuCCESs.gms(41) 3 Mb
+--- . Techs_ELEC.gms(433) 3 Mb
+--- SuCCESs.gms(42) 3 Mb
+--- . Techs_CHEM.gms(347) 3 Mb
+--- SuCCESs.gms(43) 3 Mb
+--- . Techs_INDU.gms(527) 3 Mb
+--- SuCCESs.gms(44) 3 Mb
+--- . Techs_TRAN.gms(338) 3 Mb
+--- SuCCESs.gms(45) 3 Mb
+--- . Techs_BLDN.gms(119) 3 Mb
+--- SuCCESs.gms(48) 3 Mb
+--- . Demand.gms(238) 3 Mb
+--- SuCCESs.gms(49) 3 Mb
+--- . Demand_Nord.gms(227) 3 Mb
+--- SuCCESs.gms(55) 3 Mb
+--- . Techs_TEMP.gms(104) 3 Mb
+--- SuCCESs.gms(61) 3 Mb
+--- . Emissions.gms(81) 3 Mb
+--- SuCCESs.gms(65) 3 Mb
+--- . Trade.gms(88) 3 Mb
+--- SuCCESs.gms(68) 3 Mb
+--- . Electricity_main.gms(23) 3 Mb
+--- .. REPRESENTATIVE_PERIODS.txt(5) 3 Mb
+--- . Electricity_main.gms(27) 3 Mb
+--- .. HOURS.txt(168) 3 Mb
+--- . Electricity_main.gms(67) 3 Mb
+--- .. REPRESENTATIVE_PERIODS_WEIGHTS.txt(5) 3 Mb
+--- . Electricity_main.gms(71) 3 Mb
+--- .. VRE_CAPACITY_FACTORS.txt(841) 4 Mb
+--- . Electricity_main.gms(75) 4 Mb
+--- .. DEMAND.txt(841) 4 Mb
+--- . Electricity_main.gms(160) 4 Mb
+--- .. Electricity_core.gms(150) 4 Mb
+--- . Electricity_main.gms(205) 4 Mb
+--- SuCCESs.gms(71) 4 Mb
+--- . CapacityInitial.gms(131) 4 Mb
+--- SuCCESs.gms(72) 4 Mb
+--- . CapacityInitial_Nord.gms(96) 4 Mb
+--- SuCCESs.gms(75) 4 Mb
+--- . CLASH_Connector.gms(9) 4 Mb
+--- .. CLASH_Core.gms(103) 4 Mb
+--- ... CLASH_ReadData.gms(16) 4 Mb
+--- GDXin=C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASH_Parametrization_ECE.gdx
+--- GDX File ($gdxIn) C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\CLASH\CLASH_Parametrization_ECE.gdx
+--- ... CLASH_ReadData.gms(27) 4 Mb
+--- .... CLASHinput_LUH2_LUAreaByBiome.txt(11) 4 Mb
+--- ... CLASH_ReadData.gms(32) 4 Mb
+--- .... CLASHinput_LUH2_LUAreaSSP245.txt(91) 4 Mb
+--- ... CLASH_ReadData.gms(37) 4 Mb
+--- .... CLASHinput_LUH2_ForestAgeClassArea.txt(11) 4 Mb
+--- ... CLASH_ReadData.gms(41) 4 Mb
+--- .... CLASHinput_WoodProperties.txt(25) 4 Mb
+--- ... CLASH_ReadData.gms(41) 4 Mb
+--- .. CLASH_Core.gms(106) 4 Mb
+--- ... CLASH_Livestock.gms(140) 4 Mb
+--- .. CLASH_Core.gms(459) 4 Mb
+--- . CLASH_Connector.gms(254) 4 Mb
+--- SuCCESs.gms(76) 4 Mb
+--- . Techs_NonCO2.gms(254) 4 Mb
+--- SuCCESs.gms(79) 4 Mb
+--- . Climate.gms(224) 4 Mb
+--- SuCCESs.gms(108) 4 Mb
+--- . Scenario_FixLandUseToSSP245.gms(6) 4 Mb
+--- SuCCESs.gms(118) 4 Mb
+--- . osemosys_equ.gms(544) 4 Mb
+--- SuCCESs.gms(142) 4 Mb
+--- . PostProcess_Energy.gms(68) 4 Mb
+--- SuCCESs.gms(143) 4 Mb
+--- . PostProcess_Emissions.gms(20) 4 Mb
+--- SuCCESs.gms(215) 4 Mb
+--- Starting execution: elapsed 0:00:00.032
+--- SuCCESs.gms(8435) 70 Mb
+--- Generating LP model SuCCESs
+--- SuCCESs.gms(8439) 1140 Mb
+---   3,547,278 rows  4,224,178 columns  10,130,031 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.625E-06, 3.655E+08] - Zero values observed as well
+--- Bound     [min, max] : [ 3.812E-05, 3.830E+04] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.801E-14, 1.000E+06] - Zero values observed as well
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:10.036
+
+IBM ILOG CPLEX   42.5.0 cf11b917 Mar 30, 2023          WEI x86 64bit/MS Window
+
+--- GAMS/Cplex Link licensed for continuous and discrete problems.
+
+Reading parameter(s) from "C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\cplex.opt"
+>>  scaind=1
+>>  rerun=auto
+>>  iis=1
+>>  lpmethod=4
+>>  baralg=1
+>>  barcrossalg=1
+>>  barorder=1
+>>  THREADS=4
+>>  ! barobjrng=150
+>>  barepcomp=1E-10
+>>  advind=0
+>>  ! solutiontype=2
+>>  barobjrng=1e+22
+Finished reading from "C:\Users\ekholm\Documents\SuCCESs\SuCCESs-Nord public\cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 515.25 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 1383.02 Mb (peak 1396.55 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 120.73 Mb (peak 848.92 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Read_Scale                              1
+CPXPARAM_LPMethod                                4
+CPXPARAM_Threads                                 4
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Algorithm                       1
+CPXPARAM_Barrier_Ordering                        1
+CPXPARAM_Barrier_Crossover                       1
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_Barrier_ConvergeTol                     1e-10
+CPXPARAM_Barrier_Limits_ObjRange                 1e+22
+Tried aggregator 1 time.
+Presolve time = 5.49 sec. (5250.58 ticks)
+
+--- LP status (13): user aborted.
+--- Cplex Time: 5.55sec (det. 5268.68 ticks)
+
+--- Rerunning with presolve turned off and solving with LPMETHOD=1.
+
+Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
+CPXPARAM_Advance                                 2
+CPXPARAM_Preprocessing_Presolve                  0
+CPXPARAM_Read_Scale                              1
+CPXPARAM_LPMethod                                1
+CPXPARAM_Threads                                 4
+CPXPARAM_Parallel                                1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Algorithm                       1
+CPXPARAM_Barrier_Ordering                        1
+CPXPARAM_Barrier_Crossover                       1
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+CPXPARAM_Barrier_ConvergeTol                     1e-10
+CPXPARAM_Barrier_Limits_ObjRange                 1e+22
+
+--- LP status (13): user aborted.
+--- Cplex Time: 1.55sec (det. 2255.05 ticks)
+
+
+Solution aborted due to user request
+
+--- Reading solution for model SuCCESs
+--- SuCCESs.gms(8439) 1140 Mb  21 secs
+--- Executing after solve: elapsed 0:00:28.585
+--- SuCCESs.gms(8573) 1140 Mb
+*** Status: Normal completion
+--- Job SuCCESs.gms Stop 03/24/26 10:11:05 elapsed 0:00:29.512
